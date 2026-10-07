@@ -1,0 +1,34 @@
+:root{--bg:#eef3ea;--ink:#12332b;--card:#fff;--line:#cdd9c8;--accent:#ff9933;--accent-ink:#2a1500;--muted:#566c63;--ok:#1f7a4d}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1f1a;--ink:#e8f1ec;--card:#16302a;--line:#2a4a40;--muted:#9bb5aa}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Hind',system-ui,sans-serif;font-size:1.05rem;line-height:1.55}
+.wrap{max-width:720px;margin:0 auto;padding:20px}
+.top{display:flex;justify-content:space-between;align-items:center}
+h1{font-size:2rem;font-weight:700;margin:0;letter-spacing:-.01em}
+.tag{color:var(--muted);margin:4px 0 22px}
+button,input{font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:12px;padding:12px 16px;cursor:pointer}
+input{cursor:text;width:100%;font-size:1.6rem;font-weight:600}
+button:hover{border-color:var(--ink)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:700}
+.lang{padding:6px 14px;font-weight:600}
+.prog{height:6px;background:var(--line);border-radius:9px;overflow:hidden;margin-bottom:22px}
+.prog div{height:100%;background:var(--ink)}
+.q{font-size:clamp(1.6rem,5vw,2.2rem);font-weight:700;line-height:1.2;margin:0 0 6px}
+.help{color:var(--muted);margin:0 0 18px}
+.opts{display:grid;gap:10px}
+.opts button{text-align:left;font-size:1.15rem;padding:16px}
+.nav{display:flex;gap:10px;margin-top:18px}
+.err{color:#b3261e;margin-top:8px;min-height:1.4em}
+.big{font-size:clamp(2.4rem,9vw,3.6rem);font-weight:700;line-height:1;margin:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:12px}
+.card h3{margin:0 0 4px;font-size:1.25rem}
+.why{color:var(--ok);font-size:.92rem;margin:6px 0}
+.docs{margin:8px 0;padding:0;list-style:none}
+.docs label{display:flex;gap:8px;align-items:center;padding:2px 0}
+.docs input{width:auto;transform:scale(1.2)}
+.card a{display:inline-block;margin-top:6px;font-weight:700;color:var(--ink)}
+.warn{font-size:.88rem;color:var(--muted);margin-top:4px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+footer{color:var(--muted);font-size:.85rem;margin-top:28px}
+@media print{.top button,.row,.nav,.prog{display:none}}
